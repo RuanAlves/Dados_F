@@ -1,0 +1,180 @@
+https://www.ahgora.com.br/novabatidaonline/ - https://app.ahgora.com.br/externo/index/fotoninfo
+Matricula: 02785
+senha: Bxde94o,law
+
+Quiosque
+http://quiosque.foton.la:9098/quiosque/Default.aspx
+Usuário: 04345429110
+senha: RUA0169
+
+user: f701141
+senha: Foton@005
+
+user: f649667
+senha: Foton@0001
+
+git rm --cached certificado.pem
+
+
+git config --global http.sslCAInfo C:\Users\ferre\workspace\Foton\Certificado/ca-bundle.crt
+
+http://simtr-parametrizacao-des-esteiras.nprd2.caixa/simtr-parametrizacao/doc
+http://simtr-gestao-documento-des-esteiras.nprd2.caixa/simtr-gestao-documento/doc
+http://simtr-patriarca-des-esteiras.nprd2.caixa/simtr-patriarca/doc
+http://simtr-hub-outsourcing-des-esteiras.nprd2.caixa/simtr-hub-outsourcing/doc
+http://simtr-dossie-produto-des-esteiras.nprd2.caixa/simtr-dossie-produto/doc
+http://simtr-api-intranet-des-esteiras.nprd2.caixa/simtr-api/doc -> swagger
+
+
+http://simtr-parametrizacao-des-esteiras.nprd2.caixa/simtr-parametrizacao/doc/#/ -> swagger
+http://simtr-web-des-esteiras.nprd2.caixa/login -> Acesso sistema
+
+Analista Desenvolvedor
+Você irá atuar como Desenvolvedor Java, no projeto Clientes / SIMTR - Caixa (UPJ - Caixa PEDeS 5358/2019)
+
+Nome do seu gestor: Augusto Siqueira
+
+############################## [FIM] PROJETOS ##############################
+Legado 
+SIMTR-API
+SIMTR-OURSOURCING-API
+SIMTR-siecm-api -> Biblioteca de integração com o GED
+
+-
+Quarkus
+SIMTR-ARQUITETURA
+SIMTR-ASSINATURA-DIGITAL
+SIMTR-DOCUMENTO
+SIMTR-DOSSIE-PRODUTO
+SIMTR-GESTAO-DOCUMENTO
+SIMTR-HUB-OUTSOURCING 
+SIMTR-PARAMETRIZAÇÃO
+SIMTR-PATRIARCA
+SIMTR-REPOSITORIO
+SIMTR-SCHEDULER 
+SIMTR-credmei-api -> Não usa
+
+
+* SIMTR-ARQUITETURA - (Biblioteca de arquitetura criada pelo Edoardo. Todos os módulos tem essa lib como dependencia.)
+* SIMTR-ASSINATURA-DIGITAL - (Biblioteca que valida e extrai as assinaturas digitais de um pdf.)
+* SIMTR-DOCUMENTO - (Nome vai mudar para SIMTR-COMPONENTES, que é um bilblioteca onde vai ter serviços comuns entre os outros módulos)
+	Apoio à Gestão de Armazenamento de documentos, o módulo é responsável por gerenciar a Integração com o SIECM (definitivo) e Azure Blob Storage (temporário);
+* SIMTR-DOSSIE-PRODUTO - (Módulo para criação e consulta de dossies de produto. Por enquanto tem só consultas. A criação ainda está no monolito.)
+	Apoio ao Negócio de Dossiês Produto com serviços de criação, edição e consulta de dossiês de produto
+* SIMTR-GESTAO-DOCUMENTO - (Módulo para criação e consulta de documentos. Por enquanto tem apenas a criação de documento do storage. A criação de documento do SIECm ainda está no monolito. 
+	Consulta já existe no módulo para os dois tipos. Apoio à Gestão de Armazenamento de documentos, o módulo é responsável por gerenciar a Integração com o SIECM (definitivo) e Azure Blob Storage (temporário))
+* SIMTR-HUB-OUTSOURCING (O outsourcing é uma api que pega os documentos e envia pro fornecedor, que é um terceirizado que vai realizar os serviços de extração de dados, tratamento de imagem e tal)
+	Modernização arquitetural do SIMTR-outsourcing-api responsável pela gestão do outsourcing. Alterar a integração entre sistemas de forma que seja realizada de forma assíncrona. Além disso, não serão mais transitados binários.
+* SIMTR-PARAMETRIZAÇÃO - (Módulo onde vai comportar os cadastros do sistema. Ainda tem muitos no monolito, mas estamos migrando aos poucos.)
+	Módulo especializado na gestão das parametrizações do SIMTR.
+* SIMTR-PATRIARCA - (Módulo de cache do sistema. Carrega toda a parametrização do sistema.)
+	Módulo que carrega toda a parametrização a partir do banco de dados, mantendo-a em cache (memória), visando diminuir a quantidade de consultas diretas ao banco. 
+	Atualmente ele faz essa verificação a cada 3 minutos.
+* SIMTR-REPOSITORIO - (Módulo de entidades)
+* SIMTR-SCHEDULER (Api que realizar processos automaticamente determinado por tempo)
+	Módulo para execução de rotinas agendadas e periódicas. Retorno de dossiês produto para as filas quando estes são abandonados pelos usuários;
+	Envio de sinalização de execução de fluxo (workflow) SINDA para nova tentativa em caso de falha da primeira;
+	Envio de resultado de outsourcing para o SINDA em caso de falha numa primeira tentativa;
+
+Angular
+SIMTR-WEB
+SIMTR-web-componentes
+	- Colocar os compolentes (Novo Projeto)
+
+#######################
+persistencia - entidades
+mapeamento - DTOS
+negocio - toda camada negocial
+rest - endpoints
+
+############################## [FIM] PROJETOS ##############################
+
+############################## [INICIO] CERIMONIAS ##############################
+Refine:  quarta 14h (de 15 em 15 dias)
+
+Daily: 11h (Todos os dias)
+Review: sexta 14h (de 15 em 15 dias)
+Retro: Depois da Review ou antes da Planning
+Planning: segunda 14h (de 15 em 15 dias)
+
+Sala dev para planejamento -> https://teams.microsoft.com/l/meetup-join/19%3ameeting_NDBhOWM1ZTItNjI4Ny00YzI1LTlkZWUtN2M4YjVkMmYwODM4%40thread.v2/0?context=%7b%22Tid%22%3a%22ab9bba98-684a-43fb-add8-9c2bebede229%22%2c%22Oid%22%3a%22b6fe6f39-951a-4719-be02-4d88a48c633f%22%7d
+
+############################## [FIM] CERIMONIAS ##############################
+
+marina, eu, isaias, alex - DEVS
+Ana Paula - Analista de Negocio
+Edoardo - arquiteto
+Dayana, Carla, Edilson - Analista de teste
+Rose - Scrum master
+Lindonilson Cristiano - DBA
+Julio - Apoio a PRD
+Arthur e Diogo - PO
+
+##############################
+SIECM - Gerenciamento Eletrônico de Documentos
+GED = SIECM/ORC -> Onde os Arquivos são salvos
+outsourcing -> Terceirização
+Ao criar novas consultas, sempre verificar no LOG
+OKD -> os desenvolvedores criam, testam e implantam aplicações na nuvem podendo usar diversas linguagens de programação. Carol vai me mostrar como funciona
+SICLI (Sistema de Clientes)
+SaaS (software como serviço)
+SINDA -> API externas que ajudam a orquestrar o processo do sistema. 
+	Ex: Quando envia uma documentaçÃO FIES, ele que definem o fluxo do que tem que ser feito na renegociação de dados (o que falta e próximos passos) (Tem um audio da carol)
+
+############################## [INICIO] TESTES ##############################
+
+- Quando se cria uma nova funcionalidade, deve se criar um teste
+- As vezes dependendo da alteração vc deve colocar testes tb
+
+############################## [FIM] TESTES ##############################
+
+############################## [INICIO] LOG DE ERROS ##############################
+
+- Quando em produção ocorre um erro, o sistema cria arquivos de logs que é enviado para um local. Assim podendo ser analisado e resolver o problema
+
+############################## [FIM] LOG DE ERROS ##############################
+
+############################## [INICIO] PROCESSO GIT ##############################
+
+- branch principal se chama -> develop
+- Feature é uma branch -> Colocamos o nome feature/numerohu_titulo
+
+- Então sempre clona a última versão da develop -> Cria sua feature -> Faz o que tem feito -> Comita a parada -> Vai para o teste
+- Exemplo de um Commit (Coloca o número da história de usúario e o título) -> HU 2187116 - [SPRINT_137] SIMTR - Gestão de Documentos - Ajuste na gravação da Data de previsão de Exclusão
+- Exemplo de um Commit ERROR (Coloco o título - qual correção fiz) -> ??????
+
+############################## [FIM] PROCESSO GIT ##############################
+
+############################## [INICIO] STATUS DOCUMENTO ##############################
+GED_REUSO
+GED_TRATADO
+STORAGE_TRATADO
+GED_RECEBIDO
+STORAGE_RECEBIDO
+############################## [FIM] PROCESSO STATUS DOCUMENTO ##############################
+
+############################## [INICIO] SHELDELUCE ##############################
+cron é a formula de quando vai rodar
+concurrentExecution = SKIP quer dizer q não vai rodar de novo se a anterior não tiver terminado
+application-dev.properties ->  valor do atualizacoes.documento.instancia
+############################## [FIM] SHELDELUCE ##############################]
+
+###### Eduardo Pediu ###########
+*** SIMTR_Welcome_kit ***
+http://alm.caixa/tfs/PEDeS/SIMTR/_git/SIMTR_DOC?path=%2F3-analise-design%2FModernizacao-Arquitetura%2F00_SIMTR_Welcome_kit&version=GBmaster
+
+*** Modernizacao-Arquitetura ***
+http://alm.caixa/tfs/PEDeS/SIMTR/_git/SIMTR_DOC?path=%2F3-analise-design%2FModernizacao-Arquitetura&version=GBmaster
+
+*** Nova arquitetura ***
+http://alm.caixa/tfs/PEDeS/SIMTR/_git/SIMTR_DOC?path=%2F3-analise-design%2FModernizacao-Arquitetura%2F00_SIMTR-Nova-Arquitetura&version=GBmaster
+
+*** Azure Recursos ***
+http://alm.caixa/tfs/PEDeS/SIMTR/_git/SIMTR_DOC?path=%2F3-analise-design%2FModernizacao-Arquitetura%2F01_Azure_Recursos&version=GBmaster
+
+
+*** Link dos repositorios ***
+https://devops.caixa/projetos/Caixa
+http://alm.caixa/tfs/PEDeS/SIMTR
+https://devops.caixa/projetos/Caixa/_git/SIMTR-scheduler/branches
+https://devops.caixa/projetos/Caixa/_git/SIMTR-documento
